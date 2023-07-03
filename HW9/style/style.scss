@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap');
+
+$white: #FFF;
+$grey: #333;
+$dark85: rgba(0, 0, 0, 0.85);
+$dark: #000;
+$green: rgb(30, 212, 0);
+$dark50: rgba(0, 0, 0, 0.5);
+$white40: rgba(255, 255, 255, 0.4);
+$smoke: #D5D8DB;
+$cian: #027FA5;
+$green40: rgba(30, 212, 0, 0.4);
+
+
+@mixin Roboto($fs, $fw, $lh){
+    font-family: 'Roboto Slab' , serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Lora($fs, $fw, $lh){
+    font-family: 'Lora' , serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Lato($fs, $fw, $lh){
+    font-family: 'Lato' , sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Quicksand($fs, $fw, $lh){
+    font-family: 'Quicksand' , sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin flex($jk, $ai, $gp){
+    display: flex;
+    justify-content: $jk;
+    align-items: $ai;
+    gap: $gp;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.header{
+    @include flex(space-around, center, none);
+    background-color: $dark85;
+    padding: 32px;
+
+    &__logo{
+        @include Roboto(32px, 700, 32px);
+        color: $white;
+    }
+    .nav{
+        @include flex(space-around, center, 56px);
+        &__item{
+            &--link{
+                color: $white;
+                @include Lato(22px, 500, 22px);
+            }
+            &-lang{
+                @include flex(space-around, center, 4px);
+            }
+        }
+    }
+    
+    .social{
+        @include flex(space-around, center, 32px);
+        &__item{
+            a{
+                color: $white;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.bg-photo{
+    background-image: url(../img/BG1.jpg);
+    padding: 296px 0 115px;
+    @include flex(center, center, 72px);
+    flex-direction: column;
+    background-size: cover;
+    background-repeat:  no-repeat;
+}
+
+.call-to-action{
+    @include flex(center, center, 32px);
+    padding: 24px 0 48px;
+    background-color: $dark85;
+    width: 90%;
+    flex-direction: column;
+    h1{
+        color: $white;
+        @include Lora(84px, 700, 100px);
+        text-transform: uppercase;
+        text-align: center;
+        &::after{
+            content: "\A to break free to fresh air";
+            white-space: pre;
+            text-align: center;
+        }
+    }
+    span{
+        @include Lato(24px, 400, 24px);
+        color: $white;
+    }
+    &__btn{
+        @include Lato(16px, 900, 16px);
+        padding: 21px 110px;
+        background-color: $green;
+        color: $white;
+        text-transform: uppercase;
+        border: none;
+    }
+}
+
+.about-us{
+    @include flex(center, center, none);
+    flex-direction: column;
+    padding: 144px 0 124px;
+
+    h2{
+        @include Roboto(56px, 700, 56px); 
+        color: $grey;
+        padding-bottom: 32px;
+    }
+    p{
+        @include Quicksand(20px, 500, 32px); 
+        width: 70%;
+        color: $grey;
+        padding-bottom: 153px;
+    }
+    .info{
+        @include flex(space-around, none, none);
+
+        &__item{
+            @include flex(start, center, none);
+            max-width: 23%;
+            flex-direction: column;
+            position: relative;
+            &-num{
+                @include Roboto(144px, 700, 144px); 
+                text-transform: uppercase;
+                color: $green;
+                position: absolute;
+                z-index: -1;
+                top: -30%;
+            }
+
+            svg{
+                padding-bottom: 18px;
+            }
+            &-ab{
+                @include Quicksand(40px, 400, 32px); 
+                color: $grey;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.nearest-trip{
+    @include flex(center, center, none);
+    flex-direction: column;
+    background-image: url(../img/BG\ 2.jpg);
+    padding: 56px 0 106px;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    &-title{
+        @include Roboto(56px, 700, 56px); 
+        text-transform: uppercase;
+        color: $white;
+        padding-bottom: 16px;
+    }
+    &-country{
+        @include Roboto(144px, 700, 144px); 
+        text-transform: uppercase;
+        color: $white;
+        padding-bottom: 16px;
+    }
+    &-date{
+        @include Quicksand(24px, 500, 24px); 
+        text-transform: uppercase;
+        color: $white;
+        padding-bottom: 32px;
+    }
+    &-info{
+        @include Quicksand(28px, 500, 32px); 
+        color: $white;
+        padding-bottom: 56px;
+        text-align: center;
+        width: 75%;
+        // position: relative;
+        // &::after{
+        //     content:" ";
+        //     border-bottom: 3px solid #fff;
+        //     min-width: 300px; 
+        //     position: absolute; 
+        }
+    &-disc{
+        @include Quicksand(28px, 500, 32px); 
+        color: $white;
+        text-transform: uppercase;
+        padding: 24px;
+    }
+    &-btn{
+        @include Quicksand(20px, 700, 20px); 
+        color: $white;
+        background-color: $green;
+        padding: 19px 50px;
+        border: none;
+    }
+}
+
+.most-popular{
+    @include flex(center, center, none);
+    flex-direction: column;
+    padding: 124px 0 72px;
+
+    .title{
+        @include Roboto(56px, 700, 56px);
+        color: $grey;
+        text-transform: uppercase;
+        padding-bottom: 40px;
+    }
+    .list{
+        @include flex(center, center, 40px);
+        &__one{
+            @include flex(start, start, none);
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 50px;
+            &__info{
+                @include Roboto(18px, 400, 18px);
+                position: absolute;
+                top: 10px;
+                background-color: $dark85;
+                color: $white;
+            }
+        }
+    }
+    &__btn{
+        @include Quicksand(20px, 700, 20px); 
+        color: $white;
+        background-color: $green;
+        padding: 19px 50px;
+        border: none;
+    }
+    &__comm{
+        padding: 8px 0 ;
+        @include Quicksand(14px, 500, 18px); 
+        text-align: center;
+        &::after{
+            content: "\A in our instagram";
+            white-space: pre;
+            text-align: center;
+        }
+    }
+}
+
+.travel-stories{
+    @include flex(center, center, none);
+    flex-direction: column;
+    padding: 124px 0 72px;
+    background-image: url(../img/BG\ 3.png);
+    background-size: cover;
+    background-repeat:  no-repeat;
+    z-index: -3;
+
+    .title{
+        @include Roboto(56px, 700, 56px);
+        color: $grey;
+        text-transform: uppercase;
+        padding-bottom: 40px;
+    }
+    .list{
+        @include flex(center, center, 40px);
+        &__one{
+            @include flex(start, start, none);
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 50px;
+            &__info{
+                @include Roboto(18px, 400, 18px);
+                position: absolute;
+                top: 10px;
+                background-color: $dark85;
+                color: $white;
+            }
+            &__info-left{
+                left: 7px;
+            }
+        }
+    }
+}
+
+.mask{
+    z-index: -1;
+    background-color: $green40;
+}
+
+
+
+.footer{
+    @include flex(space-around, center, none);
+    background-image: url(../img/BG\ 4.jpg);
+    background-size: cover;
+    background-repeat:  no-repeat;
+    padding: 96px 0 73px;
+
+    &__logo{
+        @include Roboto(32px, 700, 32px);
+        color: $dark;
+    }
+    .nav{
+        @include flex(space-around, center, 56px);
+        &__item{
+            &--link{
+                color: $dark;
+                @include Lato(22px, 500, 22px);
+            }
+            &-lang{
+                @include flex(space-around, center, 4px);
+            }
+        }
+    }
+    
+    .social{
+        @include flex(space-around, center, 32px);
+        &__item{
+            a{
+                color: $dark;
+                font-size: 24px;
+            }
+        }
+    }
+}

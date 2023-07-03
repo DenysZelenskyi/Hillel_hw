@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 32px;
+}
+.header__logo {
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #FFF;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 56px;
+}
+.header .nav__item--link {
+  color: #FFF;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.header .nav__item-lang {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+}
+.header .social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+}
+.header .social__item a {
+  color: #FFF;
+  font-size: 24px;
+}
+
+.bg-photo {
+  background-image: url(../img/BG1.jpg);
+  padding: 296px 0 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 0 48px;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 90%;
+  flex-direction: column;
+}
+.call-to-action h1 {
+  color: #FFF;
+  font-family: "Lora", serif;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 100px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.call-to-action h1::after {
+  content: "\ato break free to fresh air";
+  white-space: pre;
+  text-align: center;
+}
+.call-to-action span {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FFF;
+}
+.call-to-action__btn {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 16px;
+  padding: 21px 110px;
+  background-color: rgb(30, 212, 0);
+  color: #FFF;
+  text-transform: uppercase;
+  border: none;
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  flex-direction: column;
+  padding: 144px 0 124px;
+}
+.about-us h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #333;
+  padding-bottom: 32px;
+}
+.about-us p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  width: 70%;
+  color: #333;
+  padding-bottom: 153px;
+}
+.about-us .info {
+  display: flex;
+  justify-content: space-around;
+  align-items: none;
+  gap: none;
+}
+.about-us .info__item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: none;
+  max-width: 23%;
+  flex-direction: column;
+  position: relative;
+}
+.about-us .info__item-num {
+  font-family: "Roboto Slab", serif;
+  font-size: 144px;
+  font-weight: 700;
+  line-height: 144px;
+  text-transform: uppercase;
+  color: rgb(30, 212, 0);
+  position: absolute;
+  z-index: -1;
+  top: -30%;
+}
+.about-us .info__item svg {
+  padding-bottom: 18px;
+}
+.about-us .info__item-ab {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #333;
+  text-align: center;
+}
+
+.nearest-trip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  flex-direction: column;
+  background-image: url(../img/BG\ 2.jpg);
+  padding: 56px 0 106px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nearest-trip-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #FFF;
+  padding-bottom: 16px;
+}
+.nearest-trip-country {
+  font-family: "Roboto Slab", serif;
+  font-size: 144px;
+  font-weight: 700;
+  line-height: 144px;
+  text-transform: uppercase;
+  color: #FFF;
+  padding-bottom: 16px;
+}
+.nearest-trip-date {
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FFF;
+  padding-bottom: 32px;
+}
+.nearest-trip-info {
+  font-family: "Quicksand", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #FFF;
+  padding-bottom: 56px;
+  text-align: center;
+  width: 75%;
+}
+.nearest-trip-disc {
+  font-family: "Quicksand", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 24px;
+}
+.nearest-trip-btn {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFF;
+  background-color: rgb(30, 212, 0);
+  padding: 19px 50px;
+  border: none;
+}
+
+.most-popular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  flex-direction: column;
+  padding: 124px 0 72px;
+}
+.most-popular .title {
+  font-family: "Roboto Slab", serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #333;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+.most-popular .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.most-popular .list__one {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: none;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 50px;
+}
+.most-popular .list__one__info {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  position: absolute;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #FFF;
+}
+.most-popular__btn {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #FFF;
+  background-color: rgb(30, 212, 0);
+  padding: 19px 50px;
+  border: none;
+}
+.most-popular__comm {
+  padding: 8px 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+}
+.most-popular__comm::after {
+  content: "\ain our instagram";
+  white-space: pre;
+  text-align: center;
+}
+
+.travel-stories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  flex-direction: column;
+  padding: 124px 0 72px;
+  background-image: url(../img/BG\ 3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -3;
+}
+.travel-stories .title {
+  font-family: "Roboto Slab", serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #333;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+.travel-stories .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.travel-stories .list__one {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: none;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 50px;
+}
+.travel-stories .list__one__info {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  position: absolute;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #FFF;
+}
+.travel-stories .list__one__info-left {
+  left: 7px;
+}
+
+.mask {
+  z-index: -1;
+  background-color: rgba(30, 212, 0, 0.4);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: none;
+  background-image: url(../img/BG\ 4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 96px 0 73px;
+}
+.footer__logo {
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #000;
+}
+.footer .nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 56px;
+}
+.footer .nav__item--link {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.footer .nav__item-lang {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+}
+.footer .social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 32px;
+}
+.footer .social__item a {
+  color: #000;
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */
