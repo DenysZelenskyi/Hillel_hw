@@ -1,59 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap');
-
-$white: #FFF;
-$grey: #333;
-$dark85: rgba(0, 0, 0, 0.85);
-$dark: #000;
-$green: rgb(30, 212, 0);
-$dark50: rgba(0, 0, 0, 0.5);
-$white40: rgba(255, 255, 255, 0.4);
-$smoke: #D5D8DB;
-$cian: #027FA5;
-$green40: rgba(30, 212, 0, 0.4);
-
-
-@mixin Roboto($fs, $fw, $lh){
-    font-family: 'Roboto Slab' , serif;
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-}
-
-@mixin Lora($fs, $fw, $lh){
-    font-family: 'Lora' , serif;
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-}
-
-@mixin Lato($fs, $fw, $lh){
-    font-family: 'Lato' , sans-serif;
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-}
-
-@mixin Quicksand($fs, $fw, $lh){
-    font-family: 'Quicksand' , sans-serif;
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-}
-
-@mixin flex($jk, $ai, $gp){
-    display: flex;
-    justify-content: $jk;
-    align-items: $ai;
-    gap: $gp;
-}
-
+@import "./mixin.scss";
+@import "./variables.scss";
 
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'Roboto Flex', sans-serif;
 }
 
 .header{
